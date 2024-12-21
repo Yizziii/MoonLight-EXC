@@ -9,9 +9,9 @@ local NOTIFICATION_COOLDOWN = 1.5 -- Minimum time between notifications (in seco
 local TARGET_CHECK_INTERVAL = 0.1 -- Target check interval (in seconds)
 local DEFAULT_CONFIG = {
     Active = false, -- do not change this
-    Prediction = 0.05, -- Target movement prediction value (higher = more anticipation)
+    Prediction = 0.145, -- Target movement prediction value (higher = more anticipation)
     TargetPart = "Head", -- Body part that aimlock will target. Can also be "Head", "UpperTorso", "LowerTorso", "LeftUpperLeg", "RightUpperLeg", "LeftLowerLeg", "RightLowerLeg", "LeftFoot", "RightFoot", "Neck", "LeftShoulder", "RightShoulder", "LeftUpperArm", "RightUpperArm", "LeftLowerArm", "RightLowerArm", "LeftHand", "RightHand"
-    Smoothness = 0, -- Camera movement smoothness (0 = instant, 1 = very smooth)
+    Smoothness = 0.1, -- Camera movement smoothness (0 = instant, 1 = very smooth)
     MaxRadius = 300, -- Maximum distance to find targets
     MinimumDistance = 10, -- Minimum distance to activate aimlock, recommended to keep at 10
     DeactivationSensitivity = 0.5 -- Sensitivity to deactivate aimlock, recommended to keep at 0.5
