@@ -10,7 +10,7 @@ local TARGET_CHECK_INTERVAL = 0.1 -- Target check interval (in seconds)
 local DEFAULT_CONFIG = {
     Active = false, -- do not change this
     Prediction = 0.145, -- Target movement prediction value (higher = more anticipation)
-    TargetPart = "HumanoidRootPart", -- Body part that aimlock will target. Can also be "Head", "UpperTorso", "LowerTorso", "LeftUpperLeg", "RightUpperLeg", "LeftLowerLeg", "RightLowerLeg", "LeftFoot", "RightFoot", "Neck", "LeftShoulder", "RightShoulder", "LeftUpperArm", "RightUpperArm", "LeftLowerArm", "RightLowerArm", "LeftHand", "RightHand"
+    TargetPart = "Head", -- Body part that aimlock will target. Can also be "Head", "UpperTorso", "LowerTorso", "LeftUpperLeg", "RightUpperLeg", "LeftLowerLeg", "RightLowerLeg", "LeftFoot", "RightFoot", "Neck", "LeftShoulder", "RightShoulder", "LeftUpperArm", "RightUpperArm", "LeftLowerArm", "RightLowerArm", "LeftHand", "RightHand"
     Smoothness = 0.5, -- Camera movement smoothness (0 = instant, 1 = very smooth)
     MaxRadius = 300, -- Maximum distance to find targets
     MinimumDistance = 10, -- Minimum distance to activate aimlock, recommended to keep at 10
@@ -105,7 +105,7 @@ end
 -- To change the aimlock key, change "Enum.KeyCode.LeftControl" to the desired key
 -- Example: Enum.KeyCode.E to use the E key
 UserInputService.InputBegan:Connect(function(input)
-    if input.KeyCode == Enum.KeyCode.LeftControl then
+    if input.KeyCode == Enum.KeyCode.E then
         State.ControlPressed = true
         DEFAULT_CONFIG.Active = not DEFAULT_CONFIG.Active
         
